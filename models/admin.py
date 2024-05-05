@@ -5,7 +5,7 @@ from .models import *
 admin.site.register([SeasonModels, PartModels])
 @admin.register(MovieModels)
 class JoyLinkUserAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'is_active', 'key']
+    list_display = ['id','title', 'category', 'is_active', 'key']
     ordering = ['-create_time']
     list_editable = ['is_active', 'category']
     search_fields = ['title']
