@@ -48,9 +48,7 @@ def MoviesDetailView(request, id):
 class MoviesCreateView(APIView):
     permission_classes = [AllowAny, ]
     serializer_class = MovieSerializers
-
     @csrf_exempt
-    # @ratelimit(key='request', rate='1/s')
     def post(self, request, *args, **kwargs):
         serializer = MovieSerializers(data=request.data)
         if serializer.is_valid():
