@@ -13,7 +13,11 @@ class MovieListView(APIView):
     def get(self, request, format=None):
         service = MovieModels.objects.all()
         serializer = MovieSerializers(service, many=True)
-        return Response(serializer.data)
+        return JsonResponse({
+            "data": serializer.data,
+            "success": True,
+            "message": "Sent successfully !!!",
+        }, status=200)
 
 
 @api_view(['GET'])

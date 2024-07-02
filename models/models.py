@@ -36,8 +36,6 @@ class MovieModels(models.Model):
     )
     file_id = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
-    # season = models.ForeignKey(SeasonModels, on_delete=models.CASCADE, related_name='season')
-    # part = models.ForeignKey(PartModels, on_delete=models.CASCADE, related_name='part')
     caption = models.TextField()
     photo = models.CharField(max_length=255, null=True, blank=True)
     category = models.CharField(max_length=25, choices=Categories, default=primieras)

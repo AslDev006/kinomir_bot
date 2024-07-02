@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import *
 
 class SeasonSerializers(serializers.ModelSerializer):
-    class Meta:
+    class Meta: 
         model = SeasonModels
         fields = "__all__"
 
